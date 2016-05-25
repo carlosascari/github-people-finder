@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Github People Finder</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="progress">
+	Results: <span class="count">0</span>&nbsp;/&nbsp;<span class="total">0</span>
+	(<span class="percent">0%</span>)
+	<div class="bar"></div>
+</div>
+
+<!-- Template Entry -->
+<div class="entity-container template">
+	<div class="entity">
+		<div class="persona">
+			<div class="name">n/a</div>
+			<div class="avatar">
+				<img src="" width="80px" height="80px">
+			</div>
+			<div class="username">
+				<a href="#" target="_blank">n/a</a>
+			</div>
+		</div>
+		<div class="contact"></div>
+		<div class="persona repo template">
+			<div class="title">
+				<a href="#" target="_blank">n/a</a>
+			</div>
+			<p>n/a</p>
+			<div class="stat stars">
+				<span>stars</span><b>0</b>
+			</div>
+			<div class="stat watchers">
+				<span>watchers</span><b>0</b> 
+			</div>
+			<div class="stat forks">
+				<span>forks</span><b>0</b>
+			</div>
+			<div class="stat size">
+			<span>size</span><b>0</b> kb</div>
+		</div>
+	</div>
+</div>
+
+<!-- Results -->
+<div id="error" style="display: none"></div>
+<div id="res"></div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

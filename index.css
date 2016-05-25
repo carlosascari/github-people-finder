@@ -1,0 +1,119 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: rgba(0, 0, 0, .8);
+	font-family: sans-serif;
+}
+div.avatar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 80px;
+	height: 80px;
+	margin: auto;
+}
+div.name {
+	font-size: 12px;
+	color: #3e3e3e;
+	text-align: center;
+	padding: 10px 0;
+}
+
+div.username {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 12px;
+	color: #3e3e3e;
+	text-align: center;
+	padding: 10px 0;
+}
+
+/**/
+
+.entity-container {
+	background-color: #f5f6f7;
+	padding: 16px;
+	border-bottom: 2px dashed #99a2e7;
+}
+.entity-container .entity {
+	display: inline-block;
+}
+.entity-container .entity .persona {
+	vertical-align: top;
+	position: relative;
+	display: inline-block;
+	width: 170px;
+	height: 160px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	box-shadow: 0 1px 3px 0 rgba(45, 77, 97, 0.3);
+	margin: 0px 10px 10px 0px;
+}
+.entity-container .persona.repo {
+	box-sizing: border-box;
+	max-width: 280px;
+	width: auto;
+	min-height: 80px;
+	height: auto;
+	padding: 10px;
+	font-size: 11px;
+	margin: 1px 2px;
+}
+.entity-container .entity .contact {
+	display: inline-block;
+	font-size: 12px;
+	color: #3e3e3e;
+	padding: 0 10px;
+}
+.entity-container .entity .contact dt {
+	font-weight: bold;
+}
+.entity-container .entity .contact dd {
+	margin-left: 0;
+}
+.entity-container .entity .contact dl {
+	max-width: 240px;
+}
+.entity-container .entity .contact dl:first-child {
+	margin-top: 0;
+}
+.stat {
+	display: inline-block;
+	width: 49%;
+	margin: 2px 0;
+}
+.stat span {
+	display: inline-block;
+	width: 50px;
+	background-color: white;
+	text-align: right;
+	padding-right: 10px;
+}
+.progress {
+	position: relative;
+	padding: 5px 15px;
+}
+.progress .bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(100, 255, 100, 0.5);
+}
+#res {
+	width: 100%;
+}
+.template {
+	display: none;
+}
+#error {
+	padding: 20px;
+	background-color: crimson;
+	color: wheat;
+}
