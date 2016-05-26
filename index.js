@@ -1,5 +1,5 @@
 var UNIQUE_USERS = {}, TOTAL = 0, COUNT = 0, DISABLE_USER_LOOKUP = false, HALT = false;
-var ACCESS_TOKEN = ''
+var ACCESS_TOKEN = '';
 var MAX = ACCESS_TOKEN ? Infinity : 200;
 
 // -----------------------------------------------------------------------------
