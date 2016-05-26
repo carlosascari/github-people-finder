@@ -1,13 +1,12 @@
 var UNIQUE_USERS = {}, TOTAL = 0, COUNT = 0, DISABLE_USER_LOOKUP = false, HALT = false;
-var CLIENT_ID = '';
-var CLIENT_SECRET = '';
-var MAX = CLIENT_ID && CLIENT_SECRET ? Infinity : 200;
+var ACCESS_TOKEN = '77395152af19fcdaf65875d8450874f7ca9706a5'
+var MAX = ACCESS_TOKEN ? Infinity : 200;
 
 // -----------------------------------------------------------------------------
 
 function nolimit(x) {
-	if (!CLIENT_ID || !CLIENT_SECRET) return '';
-	return (x||'') + 'client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
+	if (!ACCESS_TOKEN) return '';
+	return (x||'') + 'access_token=' + ACCESS_TOKEN;
 }
 
 function contactElement(key, value, link) {
@@ -82,9 +81,13 @@ function pump(url) {
 					repos: []
 				};
 			}
-			var repo_element = repoElement(item);
-			UNIQUE_USERS[owner_username].repos.push(repo_element);
-			UNIQUE_USERS[owner_username].element.find('.entity').append(repo_element);
+			var existingRepos = UNIQUE_USERS[owner_username].repos;
+			var matches = existingRepos.filter(function(repo) {return repo.id === item.id});
+			if (!matches.length) {
+				var repo_element = repoElement(item);
+				UNIQUE_USERS[owner_username].repos.push(item);
+				UNIQUE_USERS[owner_username].element.find('.entity').append(repo_element);
+			}
 
 			if (UNIQUE_USERS[owner_username].user || DISABLE_USER_LOOKUP || HALT) {
 				tmp_count--;
